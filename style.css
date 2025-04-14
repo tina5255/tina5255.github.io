@@ -1,0 +1,386 @@
+.my-profile-section {
+    padding: 60px 0;
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #faf0e93d; /* Beige background color */
+}
+
+.my-profile-section .profile {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.my-profile-section .profile-article {
+    background-color: white;
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.my-profile-section .profile-header {
+    text-align: center;
+    color: white;
+}
+
+.my-profile-section .profile-p {
+    line-height: 1.5;
+    color: #333;
+}
+
+.my-profile-section .profile-ul {
+    list-style: none;
+    padding: 0;
+    color: #333;
+}
+
+.my-profile-section .profile-li {
+    margin-bottom: 5px;
+}
+
+.my-profile-section .profile-footer {
+    color: rgb(72, 72, 72);
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/******************* CSS RESET *******************/
+* { /* ALL ELEMENTS */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/******************* GENERIC ELEMENTS *******************/
+.body {
+    background-color: #fafafa;
+
+    font-family: Montserrat, Arial, sans-serif;
+
+    line-height: 1.6;
+
+    min-height: 200vh;
+}
+
+hr {
+    border: none;
+    /* Values: Width/Size Style Color */
+    border-bottom: 1px solid #ccc;
+
+    /* !important will not get replaced */
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+
+/******************* INTRO *******************/
+.intro {
+    background-image: url(images/beige\ aura.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    width: 100vw; /* viewport/window width */
+    width: auto;
+    /* quick hack to reduce scrolling */
+
+    height: 100vh; /* viewport/window height */
+
+    display: flex;
+
+    /* puts the intro in front of the navbar */
+    z-index: 1100;
+    position: relative;
+}
+
+.intro-story {
+    z-index: 900;
+    height: 75vh;
+}
+
+.intro-container {
+    background-color: #f4cd9d6d;
+    color: #fff;
+
+    /* properties: X Y Size Color */
+    box-shadow: 0 0 10px rgba(255, 233, 194, 0.5);
+
+    width: 25%;
+    padding: 20px;
+    margin: auto;
+
+    text-align: center;
+}
+
+.intro h1 {
+    text-transform: uppercase;
+    font-weight: normal;
+
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    line-height: 2;
+}
+
+/******************* CARD *******************/
+.card {
+    display: block;
+
+    color: #000;
+    text-decoration: none;
+}
+
+.card-image {
+    height: 500px;
+    overflow: hidden; /* crops the extra content */
+}
+
+.card img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+.card h2 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    
+    font-size: 1.2em; /* 120% of the font size */
+}
+
+.card:hover img {
+    transform: scale(1.2);
+
+    transition-duration: 10s;
+    transition-timing-function: linear;
+}
+
+/******************* WEBSITE CONTAINER *******************/
+.container {
+    max-width: 1280px;
+    /* pushes all content to the middle */
+    margin: auto;
+}
+
+.content-narrow {
+    max-width: 640px;
+    margin: auto;
+}
+
+/******************* GRID SYSTEM *******************/
+.row {
+    display: flex;
+    /* if the content doesn't fit the line,
+        move it to the next line */
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+/* Targets class="card" inside class="row" */
+.one-column .card {
+    width: 100%;
+}
+
+.two-columns .card {
+    width: calc((100% - 50px) / 2);
+}
+
+.three-columns .card {
+    width: calc((100% - 100px) / 3);
+}
+
+/******************* MAIN CONTENT *******************/
+.main-content {
+    margin-top: 100px;
+}
+
+.vertical-title {
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    /* changes the transformation anchor point
+        to the top left */
+    transform-origin: 0 0;
+    transform: rotate(90deg) translateY(5px);
+
+    /* disconnect the h3 from the content */
+    position: absolute;
+}
+
+/******************* FOOTER *******************/
+.website-footer {
+    background-color: #faf0e9b7;
+    padding: 50px;
+}
+
+.website-footer .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.website-footer .summary {
+    width: 33%;
+}
+
+.website-footer .footer-links {
+    list-style: none;
+
+    columns: 2;
+    gap: 50px;
+
+    margin-left: auto;
+}
+
+.website-footer .footer-item {
+    margin-bottom: 10px;
+}
+
+.website-footer .footer-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.website-footer .copyright {
+    width: 100%;
+    text-align: right;
+    margin-top: 50px;
+}
+
+/******************* NAVIGATION *******************/
+.navbar {
+    background-color: #fff;
+
+    border-color: #eee;
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 1px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    width: 100%;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+}
+
+.nav-link {
+    /* Padding on top/bottom left/right */
+    padding: 30px 20px;
+}
+
+.navbar-brand {
+    font-family: Cardo, Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5em; /* 150% of the font size */
+    font-weight: bold;
+
+    align-content: center;
+}
+
+/******************* STORY *******************/
+.story-header h1 {
+    /* twice the current font size */
+    font-size: 2em;
+    margin-bottom: 25px;
+}
+
+.story-header p {
+    font-size: 1.5em;
+    font-style: italic;
+    font-family: Cardo, Georgia, 'Times New Roman', Times, serif;
+
+    line-height: 1.2;
+}
+
+.story-header .byline {
+    margin-top: 10px;
+}
+
+/* Targets everything inside class="byline" */
+.story-header .byline * {
+    display: inline;
+    font-style: normal;
+}
+
+/* A comma can be used to add CSS to
+    multiple elements */
+.story-content p, .story-content .row {
+    margin-bottom: 50px;
+}
+
+
+
+
+
+.story-footer p {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+
+
+
+
+/******************* CONTACT FORM *******************/
+
+form{
+    margin-bottom: 100px;
+    margin-top: 10px;
+}
+
+.form-elements{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.form-element label{
+    width: 200px;
+}
+
+
+
+
+.form-element input,
+.form-element select,
+.form-element textarea,
+.form-element button
+{
+    font-family: Arial, Helvetica, sans-serif;
+    display:block;
+    flex: 1;
+
+    padding: 5px;
+}
+
+.form-element button{
+    flex: 0;
+    width: 100px
+}
